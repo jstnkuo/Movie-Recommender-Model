@@ -232,6 +232,7 @@ def show_results():
     print('----------------------------')
     print('----------------------------')
     print(f'accuracy score is {score}')
+    print('----------------------------')
     plot_similarity_scores(similar_movies, top_ratings)
 
 
@@ -243,17 +244,28 @@ show_results()
 
 # In[ ]:
 
+# Preprocessing: using vectorizer to transform text into numbered matrix
 genre_feats=vectorizer.transform(new_df['genres'])
 
+# Splitting the data into training and testing sets
 X=genre_feats.todense()
+X=np.asarray(X)
 y=new_df['rating']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+# Initiate Random Forest Regressor model
+rf=RandomForestRegressor()
+
+# Fit on data
+rf.fit(X_train,  y_train)
 
 
 # In[ ]:
 
-
+# Initiate Random Forest Regressor model
 rf=RandomForestRegressor()
+
+# Fit on data
 rf.fit(X,  y)
 
 
@@ -261,11 +273,14 @@ rf.fit(X,  y)
 
 
 def predict_ratings():
-    user_genre_input = input('choose a genre: ')
-    user_input_vector=vectorizer.transform([user_genre_input])
     print('----------------------------')
-    print(f'the predicted rating for your genre: {rf.predict(user_input_vector)}')
-
+    print('example input: Action|Comedy|Drama')
+    user_genre_input = input('choose a genre, use "|" between genres if choosing multiple: ')
+    user_input_vector=vectorizer.transform([user_genre_input])
+    user_input_vector=user_input_vector.todense()
+    user_input = np.asarray(user_input_vector)
+    print('----------------------------')
+    print(f'the predicted rating for your genre: {rf.predict(user_input)}')
 
 # In[ ]:
 
