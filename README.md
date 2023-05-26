@@ -34,4 +34,23 @@ One of the key parts of our model is the importance of different Genre features 
 
 ![alt text](https://github.com/jstnkuo/Movie-Recommender-Model/blob/main/Image_video/feature_importance.png) <br>
 
+## Exploratory Data Analysis
+
+To find potential inefficiencies between movies rated and movies created, we also did a count of each genre combination represented in movies. While dramas and documentaries are as highly represented as one would expect based on their feature importance, horror movies are surprisingly edged out in representation by comedies, making it easily the least represented relative to user preference. <br>
+
+![alt text](https://github.com/jstnkuo/Movie-Recommender-Model/blob/main/Image_video/movie_count.png) <br>
+<br>
+While certain genre features were more predictive for higher ratings, the top genre combinations in the data set ended up surprisingly close. All of the top ten highest rated combinations finished with a mark in the 3.5 range with no outliers. The top 3 genre combinations are animation/drama, documentary/war, and animation/comedy/fantasy. <br>
+![alt text](https://github.com/jstnkuo/Movie-Recommender-Model/blob/main/Image_video/average_rating.png) <br>
+
+
+## Objective and Value Proposition
+
+Leveraging the analysis of our machine learning model, we have identified specific genres of movies with significantly higher feature importance compared to others: drama, documentary, and horror. By focusing on these genres, especially "horror," movie producers and providers can optimize their products to potentially achieve higher ratings and ensuing increased profitability. <br>
+
+## Next Steps
+
+Our first step would be to Develop our model into a Flask app that maps to an API endpoint, which would make user interactions much simpler. Next, we would split our data into smaller and recent time frames, so we can investigate trends and see if they follow our current conclusions. From there, we would like to increase the scope of our models.  We could add extra features such as user tags to add nuance to our current model, or  even go in a completely different direction by making a recommendation algorithm for users based on watch or rating history. 
+
+
 
