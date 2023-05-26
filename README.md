@@ -41,6 +41,7 @@ To find potential inefficiencies between movies rated and movies created, we als
 ![alt text](https://github.com/jstnkuo/Movie-Recommender-Model/blob/main/Image_video/movie_count.png) <br>
 <br>
 While certain genre features were more predictive for higher ratings, the top genre combinations in the data set ended up surprisingly close. All of the top ten highest rated combinations finished with a mark in the 3.5 range with no outliers. The top 3 genre combinations are animation/drama, documentary/war, and animation/comedy/fantasy. <br>
+<br>
 ![alt text](https://github.com/jstnkuo/Movie-Recommender-Model/blob/main/Image_video/average_rating.png) <br>
 
 
