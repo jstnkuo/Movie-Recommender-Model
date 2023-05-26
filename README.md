@@ -16,6 +16,9 @@ MoviesLens is a project of GroupLens, which is itself a research lab based out o
   ○ Split movies into separate “name” and year” columns <br>
   ○ Create an average ratings dataset with group by <br>
   ○ Merge DataFrames together <br>
+• EDA <br>
+  ○ analyze which genres have the most movies <br>
+  ○ analyze which genres have the highest ratings <br>
 • Create genre recommendation model <br>
   ○ Split dataset into train and test <br>
   ○ Extract features from genre column with CountVectorizer <br>
@@ -26,3 +29,9 @@ MoviesLens is a project of GroupLens, which is itself a research lab based out o
   ○ Train, fit, evaluate <br>
   
 ## Feature Importance
+
+One of the key parts of our model is the importance of different Genre features in predicting a movie’s rating, which is tricky to do manually due to many movies having several genre features. While no genre results in an easy high score, the drama, documentary, and particularly the horror genre proved to be by far the best indicators of a high user score. <br>
+
+![alt text](https://github.com/jstnkuo/Movie-Recommender-Model/blob/main/Image_video/feature_importance.png) <br>
+
+
